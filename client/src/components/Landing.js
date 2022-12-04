@@ -1,4 +1,5 @@
 import React from "react";
+import logo from '../assets/logo-grey-banner.png';
 
 const styles = {
     nav: {
@@ -16,16 +17,7 @@ const styles = {
 function Landing() {
     return (
         <div>
-            <nav className="navbar" style ={styles.nav}>
-                <a href="/">login</a>
-            </nav>
-            <header className="header" style={styles.header}> 
-                <h1>Welcome</h1>
-            </header>
-            <section className="section" style={styles.section}>
-                <h2> Women in Tech </h2>
-                <p> Testing!</p>
-            </section>
+        <img src={logo} alt='Synapse Logo'></img>
         </div>
     );
 }
