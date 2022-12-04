@@ -1,23 +1,11 @@
 import React from "react";
 import logo from '../assets/logo-grey-banner.png';
-
-const styles = {
-    nav: {
-        background: 'pink',
-    },
-    header: {
-        background: 'blue',
-    },
-    section: {
-        background: 'yellow',
-    }, 
-
-}
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Landing() {
     return (
         <div>
-        <img src={logo} alt='Synapse Logo'></img>
+        <img src={logo} class="img-fluid" alt='Synapse Logo'></img>
         </div>
     );
 }
