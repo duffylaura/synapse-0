@@ -24,7 +24,14 @@ const typeDefs = gql`
         user: [User]
         group: [Group]
         network: [Network]
-        group(id: ID!): Group
+    }
+
+    type Mutation {
+        addUser(username: String!, email: String!): User
+        addGroup(name: String!, ownerID: ID!): Group
+        updateGroup(name: String!, ownerID: ID!): Group
+        removeUser(userID: ID!): User
+        removeGroup(groupID: ID!, userID: ID!): Group
     }
 `;
 
