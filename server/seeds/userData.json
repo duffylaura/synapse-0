@@ -1,0 +1,18 @@
+[
+    {
+        "username":"Farley",
+        "email":"farleyBacon@chicken.com",
+        "password":"asher124"
+
+    },
+    {
+        "username":"helloWorld",
+        "email":"test123@gmail.com",
+        "password":"test123"
+    },
+    {
+        "username":"ExampleUser",
+        "email":"example@yahoo.com",
+        "password":"example12"
+    }
+]

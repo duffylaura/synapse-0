@@ -12,7 +12,7 @@ const groupSchema = new Schema ({
         type: Schema.Types.ObjectId,
         ref: 'Users'
     },
-    users: [{
+    user: [{
 
         type: Schema.Types.ObjectId,
         ref:'Users'
