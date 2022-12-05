@@ -1,33 +1,27 @@
 import React from "react";
-
-const styles = {
-    nav: {
-        background: 'pink',
-    },
-    header: {
-        background: 'blue',
-    },
-    section: {
-        background: 'yellow',
-    }, 
-
-}
+import logo from '../assets/logo-grey-banner.png';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../index.css';
 
 function Landing() {
     return (
-        <div>
-            <nav className="navbar" style ={styles.nav}>
-                <a href="/">login</a>
-            </nav>
-            <header className="header" style={styles.header}> 
-                <h1>Welcome</h1>
-            </header>
-            <section className="section" style={styles.section}>
-                <h2> Women in Tech </h2>
-                <p> Testing!</p>
-            </section>
+        <div class="container">
+            <div class="row"> <br></br> <br></br></div>
+            <div class="row align-items-center">
+                <div class="col-sm"> </div>
+                <div class="col-sm">
+                    <img src={logo} class="img-fluid" alt='Synapse Logo'></img>
+                    <div>
+                        <div class="col text-center"> <button class="custom-button"> Login </button> </div> <br></br>
+                        <div class="col text-center"><button class="custom-button"> Sign Up </button></div> <br></br>
+                        <div class="col text-center"><button class="custom-button"> About </button></div> <br></br>
+                    </div>
+                </div>
+                <div class="col-sm"> </div>
+            </div>
         </div>
     );
+
 }
 
 export default Landing;
