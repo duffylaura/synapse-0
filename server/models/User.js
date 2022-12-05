@@ -16,7 +16,7 @@ const userSchema = new Schema({
         type: String,
         required: true
     },
-    groups: [
+    group: [
     {
         type: Schema.Types.ObjectId,
         ref:"Group"
