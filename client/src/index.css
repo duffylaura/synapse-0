@@ -25,3 +25,23 @@ code {
   border: 1px solid #1BF7D3;
   box-shadow: 4px 4px 4px rgba(27, 247, 211, 0.5);
 }
+
+.font{
+  font-family: 'Crimson Pro', serif;
+}
+
+@media screen and (max-width: 768px) {
+
+.hide-on-phone{
+  visibility: hidden;
+}
+
+
+
+}
+
+@media screen and (min-width: 768px) {
+.hide-on-desktop{
+  visibility: hidden;
+}
+}

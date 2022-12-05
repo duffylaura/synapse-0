@@ -6,6 +6,7 @@ import '../index.css';
 function Landing() {
     return (
         <div class="container">
+            <div class="row"> <br></br> <br></br></div>
             <div class="row align-items-center">
                 <div class="col-sm"> </div>
                 <div class="col-sm">
