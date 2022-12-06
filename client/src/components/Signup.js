@@ -8,7 +8,6 @@ import logo from '../assets/logo-grey-banner.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../index.css';
 
-
 function Signup() {
   // Create state variables for the fields in the form
   // We are also setting their initial values to an empty string

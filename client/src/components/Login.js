@@ -1,66 +1,109 @@
-import React from 'react'
+import React, { useState } from 'react';
+
+// Here we import a helper function that will check if the email is valid
+import { checkPassword, validateEmail } from '../utils/helpers';
+
+//Style
 import logo from '../assets/logo-grey-banner.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../index.css';
 
-class LoginForm extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-        value: 'Enter text here...'
-      };
-  
-      this.handleChange = this.handleChange.bind(this);
-      this.handleSubmit = this.handleSubmit.bind(this);
-    }
-  
-    handleChange(event) {
-      this.setState({value: event.target.value});
-    }
-  
-    handleSubmit(event) {
-      alert('Proifle was updated ' + this.state.value);
-      event.preventDefault();
-    }}
-
 function Login() {
+
+  // Create state variables for the fields in the form
+  // We are also setting their initial values to an empty string
+  const [email, setEmail] = useState('');
+  const [userName, setUserName] = useState('');
+  const [password, setPassword] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const handleInputChange = (e) => {
+    // Getting the value and name of the input which triggered the change
+    const { target } = e;
+    const inputType = target.name;
+    const inputValue = target.value;
+
+    // Based on the input type, we set the state of either email, username, and password
+    if (inputType === 'email') {
+      setEmail(inputValue);
+    } else if (inputType === 'userName') {
+      setUserName(inputValue);
+    } else {
+      setPassword(inputValue);
+    }
+  };
+
+  const handleFormSubmit = (e) => {
+    // Preventing the default behavior of the form submit (which is to refresh the page)
+    e.preventDefault();
+
+    // First we check to see if the email is not valid or if the userName is empty. If so we set an error message to be displayed on the page.
+    if (!validateEmail(email) || !userName) {
+      setErrorMessage('Email or username is invalid');
+      // We want to exit out of this code block if something is wrong so that the user can correct it
+      return;
+      // Then we check to see if the password is not valid. If so, we set an error message regarding the password.
+    }
+    if (!checkPassword(password)) {
+      setErrorMessage(
+        `Choose a more secure password for the account: ${userName}`
+      );
+      return;
+    }
+    alert(`Hello ${userName}`);
+
+    // If everything goes according to plan, we want to clear out the input after a successful registration.
+    setUserName('');
+    setPassword('');
+    setEmail('');
+  };
+
     return (
-        <div class="container">
-        <div class="font">
-            <div class="row">
-                <div class="row"><br></br><br></br></div>
-                <div class="col-1"></div>
-                <div class="col-4"> 
-                    <div class="hide-on-phone">
-                        <div class="col-sm"><br></br></div>
-                        <div class="col-sm"><img src={logo} class="img-fluid" alt='Synapse Logo'></img> </div>
-                        <div class="col-sm"><br></br></div>
+        <div className="container">
+        <div className="font">
+            <div className="row">
+                <div className="row"><br></br><br></br></div>
+                <div className="col-1"></div>
+                <div className="col-4"> 
+                    <div className="hide-on-phone">
+                        <div className="col-sm"><br></br></div>
+                        <div className="col-sm"><img src={logo} className="img-fluid" alt='Synapse Logo'></img> </div>
+                        <div className="col-sm"><br></br></div>
                     </div>
                 </div>
-                <div class="col-6">
+                <div className="col-6">
                     <div>
-                    <form onSubmit={this.handleSubmit}>
-                        <div class="col text-center"><h2> Login</h2></div><br></br>
-                        <label> Email: <textarea value={this.state.value} onChange={this.handleChange} /> </label>
-                        <label> Password: <textarea value={this.state.value} onChange={this.handleChange} /> </label>
-                        <input type="submit" value="Submit" />
-                        <div class="col text-center"><button class="custom-button"> Login </button></div>
-                    </form>
+                        <form className="form">
+                            <div className="col text-center"><h2> Login </h2></div><br></br>
+                            <div className="col text-center">
+                                <input value={userName} name="userName" 
+                                onChange={handleInputChange} type="text" 
+                                placeholder="Username"/>
+                            </div><br></br>
+                            <div className="col text-center">
+                                <input value={password} name="password" 
+                                onChange={handleInputChange} type="password" 
+                                placeholder="Password."/>
+                            </div><br></br>
+                            <div className="col text-center">
+                                <button className="custom-button" type="button" onClick={handleFormSubmit}>Login</button>
+                            </div>
+                        </form>
+                        {errorMessage && ( <div> <p className="error-text">{errorMessage}</p> </div>)}
                     </div>
                 </div>
-                <div class="col-1"></div>
+                <div className="col-1"></div>
             </div>
 
-            <div class="hide-on-desktop">
-                <div class="col-sm"><br></br></div>
-                <div class="col-sm"><img src={logo} class="img-fluid" alt='Synapse Logo'></img> </div>
-                <div class="col-sm"><br></br></div>
+            <div className="hide-on-desktop">
+                <div className="col-sm"><br></br></div>
+                <div className="col-sm"><img src={logo} className="img-fluid" alt='Synapse Logo'></img> </div>
+                <div className="col-sm"><br></br></div>
             </div>
-
 
         </div>
     </div>
-    );
+);
 
 }
 
