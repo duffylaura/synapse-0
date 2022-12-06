@@ -1,5 +1,5 @@
 import React from "react";
-import Login from './components/Login.js';
+import Signup from './components/Signup.js';
 import Helmet from "react-helmet";
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
     <link rel="stylesheet" href='./index.css' />
     </Helmet>
 
-    < Login />
+    < Signup />
 
     </>
   )
