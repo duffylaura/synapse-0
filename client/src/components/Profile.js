@@ -1,9 +1,9 @@
 import React from 'react'
-import logo from '../assets/logo-grey-banner.png';
+import profilePlaceholder from '../assets/profile-placeholder.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../index.css';
 
-class LoginForm extends React.Component {
+class ProfileForm extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
@@ -23,7 +23,8 @@ class LoginForm extends React.Component {
       event.preventDefault();
     }}
 
-function Login() {
+
+function Profile() {
     return (
         <div class="container">
         <div class="font">
@@ -33,19 +34,23 @@ function Login() {
                 <div class="col-4"> 
                     <div class="hide-on-phone">
                         <div class="col-sm"><br></br></div>
-                        <div class="col-sm"><img src={logo} class="img-fluid" alt='Synapse Logo'></img> </div>
+                        <div class="col-sm"><img src={profilePlaceholder} class="img-fluid" alt='Profile Image'></img> </div>
                         <div class="col-sm"><br></br></div>
                     </div>
                 </div>
                 <div class="col-6">
                     <div>
-                    <form onSubmit={this.handleSubmit}>
-                        <div class="col text-center"><h2> Login</h2></div><br></br>
-                        <label> Email: <textarea value={this.state.value} onChange={this.handleChange} /> </label>
-                        <label> Password: <textarea value={this.state.value} onChange={this.handleChange} /> </label>
-                        <input type="submit" value="Submit" />
-                        <div class="col text-center"><button class="custom-button"> Login </button></div>
-                    </form>
+                        <div class="col text-center"><h2> @Username</h2></div><br></br>
+                        <div class="col text-center"><input type="text"/></div><br></br>
+                        <div class="col text-center"><input type="text"/></div><br></br>
+                        <div class="col text-center"><input type="text"/></div><br></br>
+
+                        <form onSubmit={this.handleSubmit}>
+                            <label> How do you define yourself? <textarea value={this.state.value} onChange={this.handleChange} /> </label>
+                            <label> Details to share... <textarea value={this.state.value} onChange={this.handleChange} /> </label>
+                            <input type="submit" value="Submit" />
+                        </form>
+                
                     </div>
                 </div>
                 <div class="col-1"></div>
@@ -64,4 +69,4 @@ function Login() {
 
 }
 
-export default Login;
+export default Profile;
