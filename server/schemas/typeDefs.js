@@ -24,14 +24,14 @@ const typeDefs = gql`
     type Query {
         user: User
         users: [User]
-        singleUserGroups(userID:ID!): [User]
-        allUsersInAGroup(groupID:ID!): [Group]
+        singleUserGroups(userID:ID!): User
+        allUsersInAGroup(groupID:ID!): Group
     }
 
     type Mutation {
         login(username: String!, password: String!): Auth
         addUser(username: String!, email: String!, password: String!): Auth
-        addGroup(ownerID: ID!, name: String!): Group
+        addGroup(ownerID: ID!, name: String!, membersID: ID!): Group
         addMembers(groupID:ID!, newMemberID: ID!): Group
         removeUser(userID: ID!): User
         removeGroup(groupID: ID!, userID: ID!): Group
