@@ -8,12 +8,15 @@ const groupSchema = new Schema ({
         required: true,
         unique: true
     },
-    ownerID : {
-        type: Schema.Types.ObjectId,
-        ref: 'User'
-    },
-    members: [{
 
+    members: [
+        {
+        ownerID : {
+            type: Schema.Types.ObjectId,
+            ref: 'User'
+        }},
+        {
+        
         type: Schema.Types.ObjectId,
         ref:'User'
 
