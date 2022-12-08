@@ -23,14 +23,15 @@ export const ADD_USER = gql `
 `;
 
 export const ADD_GROUP = gql `
-    mutation addGroup($name: String!, $ownerID: ID!) {
+    mutation addGroup($ownerID: ID!, name: String!) {
         addGroup(name: $name, ownerID: $ownerID)
     }
 `;
 
-export const UPDATE_GROUP = gql `
-    mutation updateGroup($name: String!, $ownerID: ID!){
-        updateGroup(name: $name, ownerID: $ownerID)  
+
+export const ADD_MEMBERS = gql `
+    mutation addMembers($groupID: ID!, $newMemberID: ID!) {
+        addGroup(groupID: $groupID, newMemberID: $newMemberID)
     }
 `;
 
