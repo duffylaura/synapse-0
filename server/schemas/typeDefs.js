@@ -5,29 +5,32 @@ const typeDefs = gql`
         _id: ID
         username: String
         email: String
+        password: String 
     }
 
     type Group {
         _id: ID
         name: String
-        ownerID: User
         users: [User]
     }
 
     type Network {
         _id: ID
-        networkName: String
-        userId: User
     }
-
+    type Auth {
+        token: ID!
+        user: User
+    }
     type Query {
-        user: [User]
-        group: [Group]
-        network: [Network]
+        user: User
+        users: [Users]
+        group(ownerID:ID!): [Group]
+        network(ownerID:ID!): [Network]
     }
 
     type Mutation {
-        addUser(username: String!, email: String!): User
+        login(username: String!, password: String!): Auth
+        addUser(username: String!, email: String!, password: String!): Auth
         addGroup(name: String!, ownerID: ID!): Group
         updateGroup(name: String!, ownerID: ID!): Group
         removeUser(userID: ID!): User
