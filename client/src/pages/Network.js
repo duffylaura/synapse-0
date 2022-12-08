@@ -1,30 +1,14 @@
+//need to query the users groups 
+//need to query the groups users 
+
+//need to query the users groups 
+
 import React from 'react'
 import profilePlaceholder from '../assets/profile-placeholder.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../index.css';
 
-class ProfileForm extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-        value: 'Enter text here...'
-      };
-  
-      this.handleChange = this.handleChange.bind(this);
-      this.handleSubmit = this.handleSubmit.bind(this);
-    }
-  
-    handleChange(event) {
-      this.setState({value: event.target.value});
-    }
-  
-    handleSubmit(event) {
-      alert('Proifle was updated ' + this.state.value);
-      event.preventDefault();
-    }}
-
-
-function Profile() {
+function Network() {
     return (
         <div class="container">
         <div class="font">
@@ -41,16 +25,9 @@ function Profile() {
                 <div class="col-6">
                     <div>
                         <div class="col text-center"><h2> @Username</h2></div><br></br>
-                        <div class="col text-center"><input type="text"/></div><br></br>
-                        <div class="col text-center"><input type="text"/></div><br></br>
-                        <div class="col text-center"><input type="text"/></div><br></br>
-
-                        <form onSubmit={this.handleSubmit}>
-                            <label> How do you define yourself? <textarea value={this.state.value} onChange={this.handleChange} /> </label>
-                            <label> Details to share... <textarea value={this.state.value} onChange={this.handleChange} /> </label>
-                            <input type="submit" value="Submit" />
-                        </form>
-                
+                    </div>
+                    <div> 
+                        <p> This is where we can import data</p>
                     </div>
                 </div>
                 <div class="col-1"></div>
@@ -69,4 +46,4 @@ function Profile() {
 
 }
 
-export default Profile;
+export default Network;
