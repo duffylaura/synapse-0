@@ -13,6 +13,9 @@ const resolvers = {
             }
             throw new AuthenticationError("You need to be logged in!");
         },
+        group: async() => {
+            return await Group.find();
+        },
         singleUserGroups: async (parent, { userID }) => {
             return User.findOne({_id: userID});
         },
