@@ -1,14 +1,12 @@
 const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
-    union SearchResults = User | Group
     type User {
         _id: ID
         username: String
         email: String
         password: String 
         memberships: [Group]
-        message: String!
     }
 
     type Group {
@@ -16,6 +14,7 @@ const typeDefs = gql`
         name: String
         ownerID: User
         members: [User]
+       
     }
 
     type Auth {
@@ -24,7 +23,6 @@ const typeDefs = gql`
     }
 
     type Query {
-        search(contains: ID): [SearchResults!]
         group: [Group]
         user: User
         users: [User]
