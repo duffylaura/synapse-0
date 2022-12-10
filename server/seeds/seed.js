@@ -12,7 +12,6 @@ db.once('open', async () =>{
     const group = await Group.insertMany(groupData);
 
     for (newGroup of group){
-        // const tempUser = user[Math.floor(Math.random() * user.length)];
         newGroup.members = user
         await newGroup.save(); 
     }
