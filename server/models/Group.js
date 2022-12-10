@@ -12,11 +12,10 @@ const groupSchema = new Schema ({
         type: Schema.Types.ObjectId,
         ref: 'User'
     },
-
     members: [
-       {
+        {
         
-        type: Schema.Types.String,
+        type: Schema.Types.ObjectId,
         ref:'User'
 
     }  

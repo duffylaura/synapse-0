@@ -8,7 +8,6 @@ const typeDefs = gql`
         email: String
         password: String 
         memberships: [Group]
-        message: String!
     }
 
     type Group {
@@ -16,6 +15,7 @@ const typeDefs = gql`
         name: String
         ownerID: User
         members: [User]
+       
     }
 
     type Auth {
@@ -24,7 +24,7 @@ const typeDefs = gql`
     }
 
     type Query {
-        search(contains: ID): [SearchResults!]
+        search(contains: String): [SearchResults!]
         group: [Group]
         user: User
         users: [User]

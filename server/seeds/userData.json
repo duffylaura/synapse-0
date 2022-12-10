@@ -2,15 +2,13 @@
     {
         "username":"Farley",
         "email":"farleyBacon@chicken.com",
-        "password":"asher124666",
-        "memberships": "Project 3 Baddies"
+        "password":"asher124666"
 
     },
     {
         "username":"helloWorld",
         "email":"test123@gmail.com",
-        "password":"test123666",
-        "memberships": "Project 3 Baddies"
+        "password":"test123666"
     },
     {
         "username":"ExampleUser",
