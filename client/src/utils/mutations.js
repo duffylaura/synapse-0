@@ -23,7 +23,7 @@ export const ADD_USER = gql `
 `;
 
 export const ADD_GROUP = gql `
-    mutation addGroup($ownerID: ID!, name: String!) {
+    mutation addGroup($ownerID: ID!, $name: String!) {
         addGroup(name: $name, ownerID: $ownerID)
     }
 `;
@@ -47,4 +47,3 @@ export const REMOVE_GROUP = gql `
     }
 `;
 
-module.exports = typeDefs; 
