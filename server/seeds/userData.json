@@ -1,18 +1,23 @@
 [
     {
-        "username":"Farley",
-        "email":"farleyBacon@chicken.com",
-        "password":"asher124666"
-
+        "username": "Charlie Rockstar",
+        "define": "",
+        "email": "CR@gmail.com",
+        "password": "",
+        "memberships": ["Tornados Women's Rugby", "Berkeley Coding Bootcamp", "415Home Gals"]
     },
     {
-        "username":"helloWorld",
-        "email":"test123@gmail.com",
-        "password":"test123666"
+        "username": "Afia Blay",
+        "define": "",
+        "email": "AB@gmail.com",
+        "password": "",
+        "memberships": ["Queer Quills", "Berkeley Coding Bootcamp"]
     },
     {
-        "username":"ExampleUser",
-        "email":"example@yahoo.com",
-        "password":"example12666"
+        "username": "Saoirse ó Súilleabháin",
+        "define": "",
+        "email": "AS@gmail.com",
+        "password": "",
+        "memberships": ["Queer Quills", "415Home Gals", "Bay Area Baristas"]
     }
 ]

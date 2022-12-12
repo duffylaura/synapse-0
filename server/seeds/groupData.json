@@ -1,11 +1,94 @@
 [
     {
-        "name": "Project 3 Baddies"
+        "name": "Tornados Women's Rugby",
+        "owner": "Charlie Rockstar",
+        "members": ["Charlie Rockstar", 
+        "Odette Pearls", 
+        "Sara Champions",
+        "Donika Ivanov",
+        "Syd Morgana", 
+        "A'ja Wilson",
+        "Emma Perez"
+        ]
     },
     {
-        "name": "Test Group"
+        "name": "Berkeley Coding Bootcamp",
+        "owner": "Mai the Magical",
+        "members": ["Mai the Magical",
+        "Charlie Rockstar",
+        "Hari Hotstuff",
+        "Dearica Hamby",
+        "Rebecca Lucy", 
+        "Afia Blay"
+        ]
     },
     {
-        "name":"Coding Bootcamp"
+        "name": "415Home Gals",
+        "owner": "Charlie Rockstar",
+        "members": ["Charlie Rockstar",
+        "A'ja Wilson", 
+        "Maria Santiago",
+        "Saoirse ó Súilleabháin"
+        ]
+    },
+    {
+        "name": "Queer Quills",
+        "owner": "Afia Blay",
+        "members": ["Afia Blay", 
+        "Saoirse ó Súilleabháin",
+        "Arike Ogunbowale",
+        "Satou Sabally",
+        "Katie McCabe",
+        "Allisha Gray",
+        "Denise O'Sullivan",
+        "Dijonai Carrington",
+        "Jonquel Jones",
+        "Brionna Jones",
+        "Niamh Fahey",
+        "Áine O'Gorman"
+        ]
+    },
+    {
+        "name": "Bay Area Baristas",
+        "owner": "Saoirse ó Súilleabháin",
+        "members": ["Saoirse ó Súilleabháin",
+        "Megan Rapinoe",
+        "Rose Lavelle",
+        "Tobin Heath",
+        "Jess Fishlock",
+        "Sofia Huerta",
+        "Phallon Tullis-Joyce",
+        "Bethany Balcer",
+        "Sam Hiatt",
+        "Nikki Stanton",
+        "Tziarra King",
+        "Alana Cook",
+        "Olivia Van der Jagt",
+        "Lauren Barnes",
+        "Jimena López",
+        "Claudia Dickey",
+        "Laurel Carolyn Ivory"
+        ]
+    },
+    {
+        "name": "Xavier Publishing House",
+        "owner": "Sue Bird",
+        "members": [
+        "Sue Bird",
+        "Saoirse ó Súilleabháin",
+        "Dominique Kremer",
+        "Jessica Healey",
+        "Antonia Matzka",
+        "Allison Attea",
+        "Lovisa Berndtsson",
+        "Michaela Boyle",
+        "Amy Budde",
+        "Meg Delay",
+        "Summer-Rae Dobson"
+        ]
     }
+    
+
+
+
 ]
