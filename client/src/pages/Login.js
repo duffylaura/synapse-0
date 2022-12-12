@@ -40,7 +40,7 @@ const Login = () => {
       });
 
       // clear form values
-      Auth.login(data.login.token);
+      Auth.login(data.addProfile.token);
       setFormState({
         username: '',
         password: '',
@@ -66,27 +66,29 @@ const Login = () => {
                 </div>
                 <div className="col-6">
                     <div>
-                    <form onSubmit={handleFormSubmit}>
-                            <div className="col text-center"><h2> Login </h2></div><br></br>
-                            <div className="col text-center">
-                                <input value={formState.username} name="username" 
-                                onChange={handleChange} type="text" 
-                                placeholder="Username"/>
-                            </div><br></br>
-                            <div className="col text-center">
-                                <input value={formState.password} name="password" 
-                                onChange={handleChange} type="password" 
-                                placeholder="Password."/>
-                            </div><br></br>
-                            <button
-                              className="btn btn-block btn-info"
-                              style={{ cursor: 'pointer' }}
-                              type="submit"
-                            >
-                              Submit
-                            </button>
-                        </form>
-                        
+                      {data ? (
+                      <p>
+                        Success! You may now head{' '}
+                        <Link to="/profile">back to your profile.</Link>
+                      </p>
+                    ) : (
+                    <form >
+                        <div className="col text-center"><h2> Login </h2></div><br></br>
+                        <div className="col text-center">
+                            <input value={formState.username} name="username" 
+                            onChange={handleChange} type="text" 
+                            placeholder="Username"/>
+                        </div><br></br>
+                        <div className="col text-center">
+                            <input value={formState.password} name="password" 
+                            onChange={handleChange} type="password" 
+                            placeholder="Password"/>
+                        </div><br></br>
+                        <div className="col text-center">
+                          <button className="custom-button" type="button" onClick={handleFormSubmit}>Submit</button>
+                        </div>
+                      </form>
+                    )}
                         {error && (
                           <div className="my-3 p-3 bg-danger text-white">
                             {error.message}
@@ -100,11 +102,15 @@ const Login = () => {
                 <div className="col-sm"><img src={logo} className="img-fluid" alt='Synapse Logo'></img> </div>
                 <div className="col-sm"><br></br></div>
             </div>
-
+            {error && (
+              <div className="my-3 p-3 bg-danger text-white">
+                {error.message}
+              </div>
+            )}
         </div>
-   </div>
-   </div>
-    )};
+    </div>
+  </div>
+)};
     
 
 export default Login;
