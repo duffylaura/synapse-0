@@ -1,18 +1,355 @@
 [
-    {
-        "username":"Farley",
-        "email":"farleyBacon@chicken.com",
-        "password":"asher124666"
-
-    },
-    {
-        "username":"helloWorld",
-        "email":"test123@gmail.com",
-        "password":"test123666"
-    },
-    {
-        "username":"ExampleUser",
-        "email":"example@yahoo.com",
-        "password":"example12666"
-    }
+    [
+        {
+            "username": "Charlie Rockstar",
+            "define": "Professional Rugby Player",
+            "email": "CR@gmail.com",
+            "password": "Storyline123!",
+            "memberships": ["Tornados Women's Rugby", "Berkeley Coding Bootcamp", "415Home Gals"]
+        },
+        {
+            "username": "Afia Blay",
+            "define": "A Journalist / Software Engineering Hybrid",
+            "email": "AB@gmail.com",
+            "password": "Storyline123!",
+            "memberships": ["Queer Quills", "Berkeley Coding Bootcamp"]
+        },
+        {
+            "username": "Saoirse ó Súilleabháin",
+            "define": "Publisher turned Coffee Shop Owner",
+            "email": "AS@gmail.com",
+            "password": "Storyline123!",
+            "memberships": ["415Home Gals", "Bay Area Baristas", "Xavier Publishing House"]
+        },
+        {
+            "username": "Odette Pearls",
+            "define": "Math Professor",
+            "email": "OP@gmail.com",
+            "password": "Storyline123!",
+            "memberships": ["Tornados Women's Rugby"]
+        },
+        {
+            "username": "Sara Champions",
+            "define": "Aeronautical & Aerospace Engineer",
+            "email": "SC@gmail.com",
+            "password": "Storyline123!",
+            "memberships": ["Tornados Women's Rugby"]
+        },
+        {
+            "username": "Donika Ivanov",
+            "define": "Aquaculturist (Fish Farmer)",
+            "email": "DI@gmail.com",
+            "password": "Storyline123!",
+            "memberships": ["Tornados Women's Rugby"]
+        },
+        {
+            "username": "Syd Morgana",
+            "define": "Data Analyst / Dog Lover",
+            "email": "SM@gmail.com",
+            "password": "Storyline123!",
+            "memberships": ["Tornados Women's Rugby"]
+        },
+        {
+            "username": "A'ja Wilson",
+            "define": "WNBA Player & Olympian",
+            "email": "AW@gmail.com",
+            "password": "Storyline123!",
+            "memberships": ["Tornados Women's Rugby", "415Home Gals"]
+        },
+        {
+            "username": "Emma Perez",
+            "define": "Industrial Designer",
+            "email": "EP@gmail.com",
+            "password": "Storyline123!",
+            "memberships": ["Tornados Women's Rugby"]
+        },
+        {
+            "username": "Mai the Magical",
+            "define": "Biochemical Engineer aka Potions Master",
+            "email": "MTM@gmail.com",
+            "password": "Storyline123!",
+            "memberships": ["Berkeley Coding Bootcamp"]
+        },
+        {
+            "username": "Hari Hotstuff",
+            "define": "Zoologist",
+            "email": "HH@gmail.com",
+            "password": "Storyline123!",
+            "memberships": ["Berkeley Coding Bootcamp"]
+        },
+        {
+            "username": "Dearica Hamby",
+            "define": "Entry Level Software Engineer",
+            "email": "DH@gmail.com",
+            "password": "Storyline123!",
+            "memberships": ["Berkeley Coding Bootcamp"]
+        },
+        {
+            "username": "Rebecca Lucy",
+            "define": "Coding Bootcamp Student",
+            "email": "RL@gmail.com",
+            "password": "Storyline123!",
+            "memberships": ["Berkeley Coding Bootcamp"]
+        },
+        {
+            "username": "Maria Santiago",
+            "define": "Stained Glass Artist",
+            "email": "MS@gmail.com",
+            "password": "Storyline123!",
+            "memberships": ["415Home Gals"]
+        },
+        {
+            "username": "Arike Ogunbowale",
+            "define": "WNBA Player by day, writer by night",
+            "email": "AO@gmail.com",
+            "password": "Storyline123!",
+            "memberships": ["Queer Quills"]
+        },
+        {
+            "username": "Satou Sabally",
+            "define": "Geological Data Technicians",
+            "email": "SS@gmail.com",
+            "password": "Storyline123!",
+            "memberships": ["Queer Quills"]
+        },
+        {
+            "username": "Katie McCabe",
+            "define": "Writer & Illustrator",
+            "email": "KMC@gmail.com",
+            "password": "Storyline123!",
+            "memberships": ["Queer Quills"]
+        },
+        {
+            "username": "Allisha Gray",
+            "define": "Full time Mom, Full time writer",
+            "email": "AG@gmail.com",
+            "password": "Storyline123!",
+            "memberships": ["Queer Quills"]
+        },
+        {
+            "username": "Denise O'Sullivan",
+            "define": "Women's Soccer Coach",
+            "email": "DOS@gmail.com",
+            "password": "Storyline123!",
+            "memberships": ["Queer Quills"]
+        },
+        {
+            "username": "Dijonai Carrington",
+            "define": "English Professor",
+            "email": "Storyline123!",
+            "password": "DC@gmail.com",
+            "memberships": ["Queer Quills"]
+        },
+        {
+            "username": "Jonquel Jones",
+            "define": "Creative Writer",
+            "email": "JJ@gmail.com",
+            "password": "Storyline123!",
+            "memberships": ["Queer Quills"]
+        },
+        {
+            "username": "Brionna Jones",
+            "define": "Interior Designer",
+            "email": "BJ@gmail.com",
+            "password": "Storyline123!",
+            "memberships": ["Queer Quills"]
+        },
+        {
+            "username": "Niamh Fahey",
+            "define": "UX/UI Lead at Google",
+            "email": "NF@gmail.com",
+            "password": "Storyline123!",
+            "memberships": ["Queer Quills"]
+        },
+        {
+            "username": "Áine O'Gorman",
+            "define": "Leaving Twitter; looking for a job *salute*",
+            "email": "AOG@gmail.com",
+            "password": "Storyline123!",
+            "memberships": ["Queer Quills"]
+        },
+        {
+            "username": "Megan Rapinoe",
+            "define": "Professional Soccer Player & Olympian",
+            "email": "MR@gmail.com",
+            "password": "Storyline123!",
+            "memberships": ["Bay Area Baristas"]
+        },
+        {
+            "username": "Rose Lavelle",
+            "define": "Professional Badass",
+            "email": "RLV@gmail.com",
+            "password": "Storyline123!",
+            "memberships": ["Bay Area Baristas"]
+        },
+        {
+            "username": "Tobin Heath",
+            "define": "founder of Re Inc., artist, soccer player",
+            "email": "TH@gmail.com",
+            "password": "Storyline123!",
+            "memberships": ["Bay Area Baristas"]
+        },
+        {
+            "username": "Jess Fishlock",
+            "define": "Barista - poet - human",
+            "email": "JF@gmail.com",
+            "password": "Storyline123!",
+            "memberships": ["Bay Area Baristas"]
+        },
+        {
+            "username": "Sofia Huerta",
+            "define": "Living life",
+            "email": "SH@gmail.com",
+            "password": "Storyline123!",
+            "memberships": ["Bay Area Baristas"]
+        },
+        {
+            "username": "Phallon Tullis-Joyce",
+            "define": "Barista, Restaurant Manager",
+            "email": "PTJ@gmail.com",
+            "password": "Storyline123!",
+            "memberships": ["Bay Area Baristas"]
+        },
+        {
+            "username": "Bethany Balcer",
+            "define": "The Coding Barista",
+            "email": "BB@gmail.com",
+            "password": "Storyline123!",
+            "memberships": ["Bay Area Baristas"]
+        },
+        {
+            "username": "Sam Hiatt",
+            "define": "Musician - Coffee Drinker - Coffee Maker",
+            "email": "SamH@gmail.com",
+            "password": "Storyline123!",
+            "memberships": ["Bay Area Baristas"]
+        },
+        {
+            "username": "Nikki Stanton",
+            "define": "Who's that girl?",
+            "email": "NS@gmail.com",
+            "password": "Storyline123!",
+            "memberships": ["Bay Area Baristas"]
+        },
+        {
+            "username": "Tziarra King",
+            "define": "Barista",
+            "email": "TK@gmail.com",
+            "password": "Storyline123!",
+            "memberships": ["Bay Area Baristas"]
+        },
+        {
+            "username": "Alana Cook",
+            "define": "Student & Barista",
+            "email": "AC@gmail.com",
+            "password": "Storyline123!",
+            "memberships": ["Bay Area Baristas"]
+        },
+        {
+            "username": "Olivia Van der Jagt",
+            "define": "Coffee Shop Manager",
+            "email": "OVDJ@gmail.com",
+            "password": "Storyline123!",
+            "memberships": ["Bay Area Baristas"]
+        },
+        {
+            "username": "Lauren Barnes",
+            "define": "Coffee Shop Owner",
+            "email": "LB@gmail.com",
+            "password": "Storyline123!",
+            "memberships": ["Bay Area Baristas"]
+        },
+        {
+            "username": "Jimena López",
+            "define": "Barista turned full time WBB Coach",
+            "email": "JL@gmail.com",
+            "password": "Storyline123!",
+            "memberships": ["Bay Area Baristas"]
+        },
+        {
+            "username": "Claudia Dickey",
+            "define": "Coffee Maker",
+            "email": "CD@gmail.com",
+            "password": "Storyline123!",
+            "memberships": ["Bay Area Baristas"]
+        },
+        {
+            "username": "Laurel Carolyn Ivory",
+            "define": "Coffee Shop Owner & Mom of 2",
+            "email": "LCI@gmail.com",
+            "password": "Storyline123!",
+            "memberships": ["Bay Area Baristas"]
+        },
+        {
+            "username": "Sue Bird",
+            "define": "the GOAT of WBB",
+            "email": "GOAT@gmail.com",
+            "password": "Storyline123!",
+            "memberships": ["Xavier Publishing House"]
+        },
+        {
+            "username": "Dominique Kremer",
+            "define": "Forensics Psychologist",
+            "email": "Storyline123!",
+            "password": "DK@gmail.com",
+            "memberships": ["Xavier Publishing House"]
+        },
+        {
+            "username": "Jessica Healey",
+            "define": "Publisher",
+            "email": "JH@gmail.com",
+            "password": "Storyline123!",
+            "memberships": ["Xavier Publishing House"]
+        },
+        {
+            "username": "Antonia Matzka",
+            "define": "Editor",
+            "email": "Storyline123!",
+            "password": "AM@gmail.com",
+            "memberships": ["Xavier Publishing House"]
+        },
+        {
+            "username": "Allison Attea",
+            "define": "Editor - Mom - Athlete",
+            "email": "Storyline123!",
+            "password": "AA@gmail.com",
+            "memberships": ["Xavier Publishing House"]
+        },
+        {
+            "username": "Lovisa Berndtsson",
+            "define": "Editor in Chief @ Xavier",
+            "email": "LOVB@gmail.com",
+            "password": "Storyline123!",
+            "memberships": ["Xavier Publishing House"]
+        },
+        {
+            "username": "Michaela Boyle",
+            "define": "Copywriter",
+            "email": "Storyline123!",
+            "password": "MBoy@gmail.com",
+            "memberships": ["Xavier Publishing House"]
+        },
+        {
+            "username": "Amy Budde",
+            "define": "Lawyer @ Xavier Pub",
+            "email": "Budde@gmail.com",
+            "password": "Storyline123!",
+            "memberships": ["Xavier Publishing House"]
+        },
+        {
+            "username": "Meg Delay",
+            "define": "Receptionist & writer",
+            "email": "Delayed@gmail.com",
+            "password": "Storyline123!",
+            "memberships": ["Xavier Publishing House"]
+        },
+        {
+            "username": "Summer-Rae Dobson",
+            "define": "Writer",
+            "email": "SummerGal@gmail.com",
+            "password": "Storyline123!",
+            "memberships": ["Xavier Publishing House"]
+        }
+    
+    ]
 ]
