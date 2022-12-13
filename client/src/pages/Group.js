@@ -1,10 +1,10 @@
-//need to query the users groups 
-
 import React from 'react'
 import profilePlaceholder from '../assets/profile-placeholder.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../index.css';
 import logo from '../assets/logo-grey-banner.png';
+// import { Link } from 'react-router-dom';
+import NewGroupForm from './components/GroupForm/index';
 
 function Group() {
     return (
@@ -22,11 +22,27 @@ function Group() {
                 </div>
                 <div class="col-6">
                     <div>
-                        <div class="col text-center"><h2> @Username</h2></div><br></br>
+                        <div class="col text-center">
+                            <h2 className="col-12 col-md-10 bg-dark text-light p-3 mb-5">
+                            {userParam ? `${user.username}'s` : ''} Groups
+                            </h2>
+                        </div><br></br>
                     </div>
                     <div> 
-                        <p> This is where we can import list of groups</p>
-                        <p> and the number of members in each group. </p>
+
+                    {!userParam && (
+                    <div
+                        className="col-12 col-md-10 mb-3 p-3"
+                        style={{ border: '1px dotted #1a1a1a' }}
+                    >
+                        <NewGroupForm />
+                    </div>
+                    )}
+
+
+                    <p> This is where we can import list of groups</p>
+                    <p> and the number of members in each group. </p>
+
                     </div>
                 </div>
                 <div class="col-1"></div>
