@@ -42,13 +42,13 @@ const resolvers = {
         addGroup: async (parent, { name }) => {
             return Group.create({ name });
         },
-        addOwner: async (parent, {userID, groupID})=>{
-            return Group.findOneAndUpdate(
-                { _id: groupID },
-                { $pull: { users: { _id: userID } } },
-                { new: true }
-            );
-        },
+        // addOwner: async (parent, {userID, groupID})=>{
+        //     return Group.findOneAndUpdate(
+        //         { _id: groupID },
+        //         { $pull: { users: { _id: userID } } },
+        //         { new: true }
+        //     );
+        // },
         addMembers: async  (parent, { groupID, newMemberID }) => {
             return Group.findOneAndUpdate(
                 { _id: groupID },
