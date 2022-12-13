@@ -7,14 +7,14 @@ const typeDefs = gql`
         define: String
         email: String
         password: String 
-        memberships: [String]
+        memberships: [Group]!
     }
 
     type Group {
         _id: ID
         name: String
         owner: User
-        members: [User]
+        members: [User]!
        
     }
 
@@ -27,8 +27,7 @@ const typeDefs = gql`
         group: [Group]
         user: User
         users: [User]
-        singleUserGroups(userID:ID!): User
-        allUsersInAGroup(groupID:ID!): Group
+
     }
 
     type Mutation {

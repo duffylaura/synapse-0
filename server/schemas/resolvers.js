@@ -15,14 +15,7 @@ const resolvers = {
         },
         group: async() => {
             return await Group.find();
-        },
-        singleUserGroups: async (parent, { userID }) => {
-            return User.findOne({_id: userID});
-        },
-        //to look at later. outputting array of group names directly.
-        allUsersInAGroup: async (parent, { groupID }) => {
-            return Group.findOne ({ _id: groupID});
-        },
+        }
     },
 
     Mutation: {
@@ -39,20 +32,20 @@ const resolvers = {
             const token = signToken(user);
             return { token, user }; 
         },
-        addGroup: async (parent, { name }, context) => {
-            if (context.user){
-                const newGroup = await Group.create({
+        addGroup: async (parent, { name }) => {
+            // if (context.user){
+                return Group.create({
                     name,
-                    owner: context.user.username,
+                    // owner: context.user.username,
                 });
 
-            await User.findOneAndUpdate(
-                {_id: context.user._id},
-                {$addToSet: {memberships: newGroup.name}}
-            );
+            // await User.findOneAndUpdate(
+            //     {_id: context.user._id},
+            //     {$addToSet: {memberships: newGroup.name}}
+            // );
 
-            return newGroup; 
-            }        
+            // return newGroup; 
+                    
         },
 
         addMembers: async  (parent, { groupID, newMemberID }) => {

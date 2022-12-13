@@ -8,7 +8,7 @@ import Auth from '../../utils/auth';
 
 const GroupForm = () => {
 
-    const [groupName, setGroupName] = useState('');
+    const [name, setGroupName] = useState('');
 
     const [addGroup, {error}] = useMutation(ADD_GROUP);
 
@@ -17,9 +17,9 @@ const GroupForm = () => {
         try {
             const { data } = await addGroup ({
                 variables: {
-                    name: groupName,
-                    owner: Auth.getProfile().data.username,
-                    members: [Auth.getProfile().data.username]
+                    name
+                    // owner: Auth.getProfile().data.username,
+                    // members: [Auth.getProfile().data.username]
                 },
             });
 
@@ -29,7 +29,7 @@ const GroupForm = () => {
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        if (name === 'groupName') {
+        if (name === 'name') {
           setGroupName(value);
         }
       };
@@ -43,9 +43,9 @@ const GroupForm = () => {
           <form onSubmit={handleFormSubmit}>
             <div>
               <textarea
-                name="groupName"
+                name="name"
                 placeholder="What is your group's name!?"
-                value={groupName}
+                value={name}
                 onChange={handleChange}
               ></textarea>
             </div>

@@ -27,15 +27,13 @@ export const ADD_GROUP = gql `
         addGroup(name: $name){
             _id
             name
-            owner
-            members {
-                username
-                define
-                email
-            }
         }
     }
 `;
+// owner
+//             members {
+//                 username
+//             }
 
 
 export const ADD_MEMBERS = gql `
