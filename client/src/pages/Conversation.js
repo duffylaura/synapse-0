@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
 // import { Navigate, useParams } from 'react-router-dom';
 // import { useQuery } from '@apollo/client';
@@ -69,6 +71,25 @@ function Conversation() {
                         <div>
                             <p> This is where we see the ongoing conversations</p>
                             <p> and the associated comments </p>
+                            {/* associated comments are appended, should be an input area with button to append a new comment */}
+                            <div class="card">
+                                <h5 class="card-header">Author: Test</h5><br><h6>Created at : time stamp</h6></br>
+                                <div class="card-body">
+                                    <h5 class="card-title">Optional?: Post title</h5>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <div class="col text-center"> <button class="custom-button"> Submit Comment </button> </div>
+                                </div>
+                            </div>
+                            <Card>
+                                <Card.Header>Author Test</Card.Header>
+                                <Card.Body>
+                                    <Card.Title>Optional? Post title</Card.Title>
+                                    <Card.Text>
+                                        With supporting text below as a natural lead-in to additional content.
+                                    </Card.Text>
+                                    <Button variant="primary">Submit Comment</Button>
+                                </Card.Body>
+                            </Card>
                         </div>
                     </div>
                     <div class="col-1"></div>
