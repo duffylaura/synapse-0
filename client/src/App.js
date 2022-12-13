@@ -20,6 +20,7 @@ import Group from './pages/Group';
 import Network from './pages/Network';
 import Nav from './components/NavBar/index';
 import NoMatch from './pages/NoMatch';
+import Conversation from './pages/Conversation';
 
 
 
@@ -82,6 +83,10 @@ function App() {
               <Route 
                 path="/group" 
                 element={<Group />} 
+              />
+              <Route 
+                path="/conversation" 
+                element={<Conversation />} 
               />
               <Route 
                 // path="/group/:id"
