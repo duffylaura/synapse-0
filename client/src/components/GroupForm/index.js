@@ -15,10 +15,11 @@ const GroupForm = () => {
     const handleFormSubmit = async(e) => {
         e.preventDefault(); 
         try {
-            const {data} = await addGroup ({
+            const { data } = await addGroup ({
                 variables: {
                     name: groupName,
                     owner: Auth.getProfile().data.username,
+                    members: [Auth.getProfile().data.username]
                 },
             });
 
