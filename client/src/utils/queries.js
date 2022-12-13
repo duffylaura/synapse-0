@@ -1,11 +1,32 @@
 import { gql } from '@apollo/client';
 
+export const QUERY_GROUP = gql `
+    query singleGroup {
+        group {
+            _id
+            name
+            owner
+            members {
+                _id
+                username
+                define
+                email
+            }
+        }
+    }
+`
+
 export const QUERY_USER = gql `
     query singleUser { 
         user {
             _id
             username
+            define
             email
+            memberships {
+                _id
+                name
+            }
         }
     }
 `;
@@ -15,6 +36,7 @@ export const QUERY_USERS = gql `
         users {
             _id
             username
+            define
             email
         }
     }
