@@ -4,15 +4,16 @@ const typeDefs = gql`
     type User {
         _id: ID
         username: String
+        define: String
         email: String
         password: String 
-        memberships: [Group]
+        memberships: [String]
     }
 
     type Group {
         _id: ID
         name: String
-        ownerID: User
+        owner: User
         members: [User]
        
     }
@@ -33,7 +34,7 @@ const typeDefs = gql`
     type Mutation {
         login(username: String!, password: String!): Auth
         addUser(username: String!, email: String!, password: String!): Auth
-        addGroup(ownerID: ID!, name: String!, membersID: ID!): Group
+        addGroup(name: String!): Group
         addMembers(groupID:ID!, newMemberID: ID!): Group
         removeUser(userID: ID!): User
         removeGroup(groupID: ID!, userID: ID!): Group

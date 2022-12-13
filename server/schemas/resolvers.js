@@ -39,8 +39,15 @@ const resolvers = {
             const token = signToken(user);
             return { token, user }; 
         },
-        addGroup: async (parent, { name, ownerID, members }) => {
-            return Group.create({ name, ownerID, members });
+        addGroup: async (parent, { name }) => {
+            return Group.create({ name });
+        },
+        addOwner: async (parent, {userID, groupID})=>{
+            return Group.findOneAndUpdate(
+                { _id: groupID },
+                { $pull: { users: { _id: userID } } },
+                { new: true }
+            );
         },
         addMembers: async  (parent, { groupID, newMemberID }) => {
             return Group.findOneAndUpdate(

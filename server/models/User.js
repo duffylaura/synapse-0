@@ -8,6 +8,10 @@ const userSchema = new Schema({
         unique: true,
         trim: true
     },
+    define: {
+        type: String,
+        maxlength: 200,
+    },
     email:{
         type: String,
         required: true,
@@ -19,12 +23,12 @@ const userSchema = new Schema({
         required: true,
         minlength: 8,
     },
-    memberships: [
-    {
-        type: Schema.Types.ObjectId,
-        ref:"Group"
-    }
-    ]
+    memberships: [{type: String}],
+    // {
+    //     type: Schema.Types.String,
+    //     ref:"Group"
+    // }
+    
 });
 
 // set up pre-save middleware to create password
