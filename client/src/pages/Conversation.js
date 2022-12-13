@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import Row from 'react-bootstrap/Row';
 
 // import { Navigate, useParams } from 'react-router-dom';
 // import { useQuery } from '@apollo/client';
@@ -49,56 +50,53 @@ import logo from '../assets/logo-grey-banner.png';
 function Conversation() {
 
     return (
-        <div class="container">
-            <div class="font">
-                <div class="row">
-                    <div class="row"><br></br><br></br></div>
-                    <div class="col-1"></div>
-                    <div class="col-4">
-                        <div class="hide-on-phone">
-                            <div class="col-sm"><br></br></div>
-                            <div class="col-sm"><img src={profilePlaceholder} class="img-fluid" alt='Profile'></img> </div>
-                            <div class="col-sm"><br></br></div>
+        <div className="container">
+            <div className="font">
+                <div className="row">
+                    <div className="row"><br></br><br></br></div>
+                    <div className="col-1"></div>
+                    <div className="col-4">
+                        <div className="hide-on-phone">
+                            <div className="col-sm"><br></br></div>
+                            <div className="col-sm"><img src={profilePlaceholder} className="img-fluid" alt='Profile'></img> </div>
+                            <div className="col-sm"><br></br></div>
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div className="col-6">
                         <div>
-                            <div class="align-right"><Link to="/new-post">
-                                <div class="col text-center"> <button class="custom-button"> Create New Post </button> </div> <br></br>
-                            </Link></div>
-                            <div class="col text-center"><h2> Conversation Page</h2></div><br></br>
+                            <Link to="/new-post">
+                                <div className="col text-center"> <button className="custom-button"> Create New Post </button> </div> <br></br>
+                            </Link>
+                            <div className="col text-center"><h2> Conversation Page</h2></div><br></br>
                         </div>
                         <div>
                             <p> This is where we see the ongoing conversations</p>
                             <p> and the associated comments </p>
                             {/* associated comments are appended, should be an input area with button to append a new comment */}
-                            <div class="card">
-                                <h5 class="card-header">Author: Test</h5><br><h6>Created at : time stamp</h6></br>
-                                <div class="card-body">
-                                    <h5 class="card-title">Optional?: Post title</h5>
-                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                    <div class="col text-center"> <button class="custom-button"> Submit Comment </button> </div>
-                                </div>
-                            </div>
+                        
                             <Card>
-                                <Card.Header>Author Test</Card.Header>
+                                <Card.Header>Time Stamp</Card.Header>
                                 <Card.Body>
+                                <Card.Text className="text-muted text-right"> Post Author</Card.Text>
                                     <Card.Title>Optional? Post title</Card.Title>
+                                    
                                     <Card.Text>
-                                        With supporting text below as a natural lead-in to additional content.
+                                        This is an example of post content. With supporting text below as a natural lead-in to additional content.
                                     </Card.Text>
-                                    <Button variant="primary">Submit Comment</Button>
+                                    {/* need new button */}
+                                    <Row><input></input></Row> <br></br>
+                                    <div className="col text-center"> <Button className="custom-button"> Submit Button </Button></div>
                                 </Card.Body>
                             </Card>
                         </div>
                     </div>
-                    <div class="col-1"></div>
+                    <div className="col-1"></div>
                 </div>
 
-                <div class="hide-on-desktop">
-                    <div class="col-sm"><br></br></div>
-                    <div class="col-sm"><img src={logo} class="img-fluid" alt='Synapse Logo'></img> </div>
-                    <div class="col-sm"><br></br></div>
+                <div className="hide-on-desktop">
+                    <div className="col-sm"><br></br></div>
+                    <div className="col-sm"><img src={logo} className="img-fluid" alt='Synapse Logo'></img> </div>
+                    <div className="col-sm"><br></br></div>
                 </div>
 
 
