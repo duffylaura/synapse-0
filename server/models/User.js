@@ -23,12 +23,10 @@ const userSchema = new Schema({
         required: true,
         minlength: 8,
     },
-    memberships: [{type: String}],
-    // {
-    //     type: Schema.Types.String,
-    //     ref:"Group"
-    // }
-    
+    memberships: [{
+        type: Schema.Types.String,
+        ref:"Group"
+    }]
 });
 
 // set up pre-save middleware to create password

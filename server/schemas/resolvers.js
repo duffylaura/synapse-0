@@ -39,38 +39,55 @@ const resolvers = {
             const token = signToken(user);
             return { token, user }; 
         },
-        addGroup: async (parent, { name }) => {
-            return Group.create({ name });
-        },
-        addOwner: async (parent, {userID, groupID})=>{
-            return Group.findOneAndUpdate(
-                { _id: groupID },
-                { $pull: { users: { _id: userID } } },
-                { new: true }
+        addGroup: async (parent, { name }, context) => {
+            if (context.user){
+                const newGroup = await Group.create({
+                    name,
+                    owner: context.user.username,
+                });
+
+            await User.findOneAndUpdate(
+                {_id: context.user._id},
+                {$addToSet: {memberships: newGroup.name}}
             );
+
+            return newGroup; 
+            }        
         },
+        
+        // addOwner: async (parent, {userID, groupID})=>{
+        //     return Group.findOneAndUpdate(
+        //         { _id: groupID },
+        //         { $pull: { users: { _id: userID } } },
+        //         { new: true }
+        //     );
+        // },
+
         addMembers: async  (parent, { groupID, newMemberID }) => {
             return Group.findOneAndUpdate(
                 { _id: groupID },
-                { 
-                    $addToSet: { newMemberID: { newMemberID } },
-                },
-                {
-                  new: true,
-                  runValidators: true,
-                }
+                { $addToSet: { newMemberID: { newMemberID } }},
+                {new: true, runValidators: true,}
             );
         },
-        removeUser: async (parent, { userID }) => {
-            return User.findOneAndDelete({ _id: userID });
-        },
-        removeGroup: async (parent, { groupID, userID }) => {
+
+        removeMemberFromGroup: async (parent, { groupID, userID }) => {
             return Group.findOneAndUpdate(
                 { _id: groupID },
                 { $pull : { users: { _id: userID } } },
                 { new: true }
             );
         },
+
+        deleteUser: async (parent, { userID }) => {
+            return User.findOneAndDelete({ _id: userID });
+        },
+
+        deleteGroup: async (parent, { groupID }) => {
+            return Group.findOneAndDelete({ _id: groupID });
+        },
+
+
     },    
 };
 
