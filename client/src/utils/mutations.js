@@ -29,7 +29,6 @@ export const ADD_GROUP = gql `
             name
             owner
             members {
-                _id
                 username
                 define
                 email
