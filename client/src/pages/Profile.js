@@ -13,28 +13,28 @@ import '../index.css';
 import logo from '../assets/logo-grey-banner.png';
 
 const Profile = () => {
-    const { profileId } = useParams();
+    const { username: userParam } = useParams();
   
     // If there is no `profileId` in the URL as a parameter, execute the `QUERY_ME` query instead for the logged in user's information
     const { loading, data } = useQuery(
-      profileId ? QUERY_USERS : QUERY_USER,
+      userParam ? QUERY_USERS : QUERY_USER,
       {
-        variables: { profileId: profileId },
+        variables: { username: userParam },
       }
     );
       // Check if data is returning from the `QUERY_ME` query, then the `QUERY_SINGLE_PROFILE` query
-  const profile = data?.me || data?.profile || {};
+  const user = data?.user || data?.users|| {};
 
   // Use React Router's `<Navigate />` component to redirect to personal profile page if username is yours
-  if (Auth.loggedIn() && Auth.getProfile().data._id === profileId) {
-    return <Navigate to="/" />;
+  if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
+    return <Navigate to="/profile" />;
   }
 
   if (loading) {
     return <div>Loading...</div>;
   }
 
-  if (!profile?.name) {
+  if (!user?.name) {
     return (
       <h4>
         You need to be logged in to see your profile page. Use the navigation
@@ -42,9 +42,8 @@ const Profile = () => {
       </h4>
     );
   }
-  
 
-// class ProfileForm extends React.Component {
+//   class ProfileForm extends React.Component {
 //     constructor(props) {
 //       super(props);
 //       this.state = {
@@ -66,8 +65,6 @@ const Profile = () => {
 
 
 
-
-function Profile() {
     return (
         <div class="container">
         <div class="font">
@@ -77,13 +74,13 @@ function Profile() {
                 <div class="col-4"> 
                     <div class="hide-on-phone">
                         <div class="col-sm"><br></br></div>
-                        <div class="col-sm"><img src={profilePlaceholder} class="img-fluid" alt='Profile Image'></img> </div>
+                        <div class="col-sm"><img src={profilePlaceholder} class="img-fluid" alt='Profile'></img> </div>
                         <div class="col-sm"><br></br></div>
                     </div>
                 </div>
                 <div class="col-6">
                     <div>
-                        <div class="col text-center"><h2> @Username</h2></div><br></br>
+                        <div class="col text-center"><h2>  Viewing {userParam ? `${user.username}'s` : 'your'} profile.</h2></div><br></br>
                         <div class="col text-center"><input type="text"/></div><br></br>
                         <div class="col text-center"><input type="text"/></div><br></br>
                         <div class="col text-center"><input type="text"/></div><br></br>
@@ -111,7 +108,6 @@ function Profile() {
     </div>
     );
 
-}
 };
 
 export default Profile;
