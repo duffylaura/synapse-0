@@ -39,14 +39,21 @@ const resolvers = {
             const token = signToken(user);
             return { token, user }; 
         },
+        addGroup: async (parent, { name }, context) => {
+            if (context.user){
+                const newGroup = await Group.create({
+                    name,
+                    owner: context.user.username,
+                });
 
-        // addOwner: async (parent, {userID, groupID})=>{
-        //     return Group.findOneAndUpdate(
-        //         { _id: groupID },
-        //         { $pull: { users: { _id: userID } } },
-        //         { new: true }
-        //     );
-        // },
+            await User.findOneAndUpdate(
+                {_id: context.user._id},
+                {$addToSet: {memberships: newGroup.name}}
+            );
+
+            return newGroup; 
+            }        
+        },
 
         addMembers: async  (parent, { groupID, newMemberID }) => {
             return Group.findOneAndUpdate(

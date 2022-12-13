@@ -3,12 +3,6 @@ import { useMutation } from '@apollo/client';
 import { LOGIN } from '../utils/mutations';
 import AuthService from '../utils/auth';
 import { Link } from 'react-router-dom';
-
-
-// Here we import a helper function that will check if the email is valid
-// import { checkPassword, validateEmail } from '../utils/helpers';
-
-//Style
 import logo from '../assets/logo-grey-banner.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../index.css';
