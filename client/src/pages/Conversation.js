@@ -85,7 +85,7 @@ function Conversation() {
                                     </Card.Text>
                                     {/* need new button */}
                                     <Row><input></input></Row> <br></br>
-                                    <div className="col text-center"> <Button className="custom-button"> Submit Button </Button></div>
+                                    <div className="col text-center"> <Button className="custom-button"> Submit Comment </Button></div>
                                 </Card.Body>
                             </Card>
                         </div>
