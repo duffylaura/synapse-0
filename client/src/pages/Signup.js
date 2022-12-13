@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
-import Auth from '../utils/auth';
+import AuthService from '../utils/auth';
 import { Link } from 'react-router-dom';
 //Style
 import logo from '../assets/logo-grey-banner.png';
@@ -14,7 +14,7 @@ function Signup() {
     password: '',
   });
   const [addUser, { error, data }] = useMutation(ADD_USER);
-  const [errorMessage, setErrorMessage] = useState('');
+  const [errorMessage] = useState('');
   const handleInputChange = (e) => {
     // Getting the value and name of the input which triggered the change
     const {name, value} = e.target;
@@ -30,7 +30,7 @@ function Signup() {
       const { data } = await addUser({
         variables: { ...formState },
       });
-      Auth.login(data.addProfile.token);
+      AuthService.login(data.addUser.token);
       //set form stat back to nothing
       setFormState ({
         username: '',

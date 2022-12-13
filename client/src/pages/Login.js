@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { LOGIN } from '../utils/mutations';
-import Auth from '../utils/auth';
+import AuthService from '../utils/auth';
 import { Link } from 'react-router-dom';
 
 
@@ -13,7 +13,7 @@ import logo from '../assets/logo-grey-banner.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../index.css';
 
-const Login = () => {
+const Login = (props) => {
   const [formState, setFormState] = useState({ 
     username: '',
     password: '' 
@@ -40,7 +40,7 @@ const Login = () => {
       });
 
       // clear form values
-      Auth.login(data.addProfile.token);
+      AuthService.login(data.login.token);
       setFormState({
         username: '',
         password: '',
