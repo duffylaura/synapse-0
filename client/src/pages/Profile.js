@@ -1,67 +1,68 @@
 import React from 'react'; 
 
-import { Navigate, useParams } from 'react-router-dom';
-import { useQuery } from '@apollo/client';
-import Auth from '../utils/auth';
+//import { Navigate, useParams } from 'react-router-dom';
+//import { useQuery } from '@apollo/client';
+//import Auth from '../utils/auth';
 
-import { QUERY_USERS, QUERY_USER } from '../utils/queries';
+//import { QUERY_USERS, QUERY_USER } from '../utils/queries';
 
 
 import profilePlaceholder from '../assets/profile-placeholder.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../index.css';
 import logo from '../assets/logo-grey-banner.png';
+import { Link } from 'react-router-dom';
 
 const Profile = () => {
-    const { username: userParam } = useParams();
+    // const { username: userParam } = useParams();
   
-    // If there is no `profileId` in the URL as a parameter, execute the `QUERY_ME` query instead for the logged in user's information
-    const { loading, data } = useQuery(
-      userParam ? QUERY_USERS : QUERY_USER,
-      {
-        variables: { username: userParam },
-      }
-    );
+    // // If there is no `profileId` in the URL as a parameter, execute the `QUERY_ME` query instead for the logged in user's information
+    // const { loading, data } = useQuery(
+    //   userParam ? QUERY_USERS : QUERY_USER,
+    //   {
+    //     variables: { username: userParam },
+    //   }
+    // );
       // Check if data is returning from the `QUERY_ME` query, then the `QUERY_SINGLE_PROFILE` query
-  const user = data?.user || data?.users|| {};
+  // const user = data?.user || data?.users|| {};
 
-  // Use React Router's `<Navigate />` component to redirect to personal profile page if username is yours
-  if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
-    return <Navigate to="/profile" />;
-  }
+//   // Use React Router's `<Navigate />` component to redirect to personal profile page if username is yours
+//   if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
+//     return <Navigate to="/profile" />;
+//   }
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
+//   if (loading) {
+//     return <div>Loading...</div>;
+//   }
 
-  if (!user?.name) {
-    return (
-      <h4>
-        You need to be logged in to see your profile page. Use the navigation
-        links above to sign up or log in!
-      </h4>
-    );
-  }
+//   if (!user?.name) {
+//     return (
+//       <h4>
+//         You need to be logged in to see your profile page. Use the navigation
+//         links above to sign up or log in!
+//       </h4>
+//     );
+//   }
 
-//   class ProfileForm extends React.Component {
-//     constructor(props) {
-//       super(props);
-//       this.state = {
-//         value: 'Enter text here...'
-//       };
+  // class ProfileForm extends React.Component {
+  //   constructor(props) {
+  //     super(props);
+  //     this.state = {
+  //       value: 'Enter text here...'
+  //     };
   
-//       this.handleChange = this.handleChange.bind(this);
-//       this.handleSubmit = this.handleSubmit.bind(this);
-//     }
+  //     this.handleChange = this.handleChange.bind(this);
+  //     this.handleSubmit = this.handleSubmit.bind(this);
+  //   }
   
-//     handleChange(event) {
-//       this.setState({value: event.target.value});
-//     }
+  //   handleChange(event) {
+  //     this.setState({value: event.target.value});
+  //   }
   
-//     handleSubmit(event) {
-//       alert('Proifle was updated ' + this.state.value);
-//       event.preventDefault();
-//     }}
+  //   handleSubmit(event) {
+  //     alert('Proifle was updated ' + this.state.value);
+  //     event.preventDefault();
+  //   }}
 
 
 
@@ -80,17 +81,20 @@ const Profile = () => {
                 </div>
                 <div class="col-6">
                     <div>
-                        <div class="col text-center"><h2>  Viewing {userParam ? `${user.username}'s` : 'your'} profile.</h2></div><br></br>
                         <div class="col text-center"><input type="text"/></div><br></br>
                         <div class="col text-center"><input type="text"/></div><br></br>
                         <div class="col text-center"><input type="text"/></div><br></br>
 
-                        <form onSubmit={this.handleSubmit}>
+                        {/* <form onSubmit={this.handleSubmit}>
                             <label> How do you define yourself? <textarea value={this.state.value} onChange={this.handleChange} /> </label>
                             <label> Details to share... <textarea value={this.state.value} onChange={this.handleChange} /> </label>
                             <label> Link to your LinkedIn: <textarea value={this.state.value} onChange={this.handleChange}/></label>
                             <input type="submit" value="Submit" />
-                        </form>
+                        </form> */}
+
+                        <Link to="/Group">
+                        <div class="col text-center"><button class="custom-button"> Link to Groups </button></div> <br></br>
+                        </Link>
                 
                     </div>
                 </div>

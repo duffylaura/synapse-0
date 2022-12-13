@@ -1,12 +1,35 @@
-//need to query the users groups 
-
 import React from 'react'
+// import { Navigate, useParams } from 'react-router-dom';
 import profilePlaceholder from '../assets/profile-placeholder.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../index.css';
 import logo from '../assets/logo-grey-banner.png';
+// import { Link } from 'react-router-dom';
+import GroupForm from '../components/GroupForm/index';
+// import {QUERY_USER} from '../utils/queries';
 
 function Group() {
+    // const { username: userParam } = useParams();
+
+    // // const { loading, data } = useQuery(userParam ? QUERY_USER : {
+    // // variables: { username: userParam },
+    // // });
+
+    // // const user = data?.me || data?.user || {};
+
+    // if (loading) {
+    //     return <div><p>Loading...</p></div>;
+    //   }
+    
+    //   if (!user?.username) {
+    //     return (
+    //       <h4>
+    //         You need to be logged in to see this. Use the navigation links above to
+    //         sign up or log in!
+    //       </h4>
+    //     );
+    //   }
+
     return (
         <div class="container">
         <div class="font">
@@ -22,11 +45,18 @@ function Group() {
                 </div>
                 <div class="col-6">
                     <div>
-                        <div class="col text-center"><h2> @Username</h2></div><br></br>
+                        <div class="col text-center">
+                       
+                    <div
+                        className="col-12 col-md-10 mb-3 p-3"
+                        style={{ border: '1px dotted #1a1a1a' }}
+                    >
+                        <GroupForm />
                     </div>
-                    <div> 
-                        <p> This is where we can import list of groups</p>
-                        <p> and the number of members in each group. </p>
+                
+                    <p> This is where we can import list of groups</p>
+                    <p> and the number of members in each group. </p>
+
                     </div>
                 </div>
                 <div class="col-1"></div>
@@ -41,6 +71,8 @@ function Group() {
 
         </div>
     </div>
+    </div>
+  
     );
 
 }
