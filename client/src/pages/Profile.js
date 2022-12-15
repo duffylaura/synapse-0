@@ -81,9 +81,10 @@ const Profile = () => {
                 </div>
                 <div class="col-6">
                     <div>
-                        <div class="col text-center"><input type="text"/></div><br></br>
-                        <div class="col text-center"><input type="text"/></div><br></br>
-                        <div class="col text-center"><input type="text"/></div><br></br>
+                        <div class="col text-center"><p> How do you define yourself? </p><input type="text"/></div><br></br>
+                        <div class="col text-center"><p> Details to share... </p><input type="text"/></div><br></br>
+                        <div class="col text-center"><p> Link to your LinkedIn: </p><input type="text"/></div><br></br>
+                        <div class="col text-center"><p> Link to your Github: </p><input type="text"/></div><br></br>
 
                         {/* <form onSubmit={this.handleSubmit}>
                             <label> How do you define yourself? <textarea value={this.state.value} onChange={this.handleChange} /> </label>
