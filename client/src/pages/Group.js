@@ -40,25 +40,19 @@ function Group() {
             <div class="row">
                 <div class="row"><br></br><br></br></div>
                 <div class="col-1"></div>
-                <div class="col-3"> 
-                    <div class="hide-on-phone">
-                        <div class="col-sm"><br></br></div>
-                        <div class="col-sm"><img src={profilePlaceholder} class="img-fluid" alt='Profile Image'></img> </div>
-                        <div class="col-sm"><br></br></div>
-                    </div>
-                </div>
-                <div class="col-8">
+               
+                <div class="col-3">
                     <div>
                         <div class="col text-center">
-                       
-                        <div
+                       <h2>@Alfia Bay</h2>
+                        {/* <div
                             className="col-12 col-md-10 mb-3 p-3"
                             style={{ border: '1px dotted #1a1a1a' }}
                         >
                             <GroupForm />
                         <p> This is where we can import list of groups</p>
                         <p> and the number of members in each group. </p>
-                        </div>
+                        </div> */}
                     
 
                         </div>

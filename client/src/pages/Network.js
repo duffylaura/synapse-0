@@ -14,6 +14,7 @@ import logo from '../assets/logo-grey-banner.png';
 function Network() {
     return (
         <div class="container">
+                        <Nav />
         <div class="font">
             <div class="row">
                 <div class="row"><br></br><br></br></div>
@@ -21,7 +22,6 @@ function Network() {
                 <div class="col-4"> 
                     <div class="hide-on-phone">
                         <div class="col-sm"><br></br></div>
-                        <Nav />
                         <div class="col-sm"><img src={profilePlaceholder} class="img-fluid" alt='Profile Image'></img> </div>
                         <div class="col-sm"><br></br></div>
                     </div>

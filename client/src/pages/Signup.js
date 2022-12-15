@@ -3,7 +3,6 @@ import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
 import AuthService from '../utils/auth';
 import { Link } from 'react-router-dom';
-import Nav from '../components/NavBar';
 //Style
 import logo from '../assets/logo-grey-banner.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -52,7 +51,6 @@ function Signup() {
             <div className="hide-on-phone">
               <div className="col-sm"><br></br></div>
               <div className="col-sm"><img src={logo} className="img-fluid" alt='Synapse Logo'></img> </div>
-              <Nav />
               <div className="col-sm"><br></br></div>
             </div>
           </div>

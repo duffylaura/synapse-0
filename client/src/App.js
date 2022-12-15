@@ -20,6 +20,7 @@ import Group from './pages/Group';
 import Network from './pages/Network';
 import Nav from './components/NavBar/index';
 import NoMatch from './pages/NoMatch';
+import NewPost from './pages/NewPost';
 
 
 
@@ -61,7 +62,6 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div>
-        <Nav />
         <Routes>
         <Route 
                 path="/" 
@@ -82,6 +82,10 @@ function App() {
               <Route 
                 path="/group" 
                 element={<Group />} 
+              />
+              <Route 
+                path="/newgroup" 
+                element={<NewPost />} 
               />
               <Route 
                 // path="/group/:id"

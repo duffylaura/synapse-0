@@ -32,7 +32,7 @@ function Nav() {
                             </Link>
                         </li>
                         <li class="nav-item">
-                            <Link to="/">
+                            <Link to="/newgroup">
                                 <div class="col text-center"> <button class="custom-nav-button">Create Group </button> </div> <br></br>
                             </Link>
                         </li>

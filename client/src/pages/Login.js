@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 import logo from '../assets/logo-grey-banner.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../index.css';
-import Nav from '../components/NavBar';
 
 const Login = (props) => {
   const [formState, setFormState] = useState({ 
@@ -48,7 +47,6 @@ const Login = (props) => {
 
     return (
         <div className="container">
-                        <Nav />
         <div className="font">
             <div className="row">
                 <div className="row"><br></br><br></br></div>
