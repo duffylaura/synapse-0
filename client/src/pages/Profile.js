@@ -1,4 +1,5 @@
 import React from 'react'; 
+import Nav from '../components/NavBar';
 
 //import { Navigate, useParams } from 'react-router-dom';
 //import { useQuery } from '@apollo/client';
@@ -75,6 +76,7 @@ const Profile = () => {
                 <div class="col-4"> 
                     <div class="hide-on-phone">
                         <div class="col-sm"><br></br></div>
+                        <Nav />
                         <div class="col-sm"><img src={profilePlaceholder} class="img-fluid" alt='Profile'></img> </div>
                         <div class="col-sm"><br></br></div>
                     </div>

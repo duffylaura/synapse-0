@@ -4,6 +4,7 @@
 //need to query the users groups 
 
 import React from 'react'
+import Nav from '../components/NavBar';
 import profilePlaceholder from '../assets/profile-placeholder.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../index.css';
@@ -19,6 +20,7 @@ function Network() {
                 <div class="col-4"> 
                     <div class="hide-on-phone">
                         <div class="col-sm"><br></br></div>
+                        <Nav />
                         <div class="col-sm"><img src={profilePlaceholder} class="img-fluid" alt='Profile Image'></img> </div>
                         <div class="col-sm"><br></br></div>
                     </div>

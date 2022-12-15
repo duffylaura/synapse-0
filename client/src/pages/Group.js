@@ -7,6 +7,7 @@ import logo from '../assets/logo-grey-banner.png';
 // import { Link } from 'react-router-dom';
 import GroupForm from '../components/GroupForm/index';
 // import {QUERY_USER} from '../utils/queries';
+import Nav from '../components/NavBar';
 
 function Group() {
     // const { username: userParam } = useParams();
@@ -39,6 +40,7 @@ function Group() {
                 <div class="col-3"> 
                     <div class="hide-on-phone">
                         <div class="col-sm"><br></br></div>
+                        <Nav />
                         <div class="col-sm"><img src={profilePlaceholder} class="img-fluid" alt='Profile Image'></img> </div>
                         <div class="col-sm"><br></br></div>
                     </div>
