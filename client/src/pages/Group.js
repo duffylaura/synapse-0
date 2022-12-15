@@ -36,43 +36,94 @@ function Group() {
             <div class="row">
                 <div class="row"><br></br><br></br></div>
                 <div class="col-1"></div>
-                <div class="col-4"> 
+                <div class="col-3"> 
                     <div class="hide-on-phone">
                         <div class="col-sm"><br></br></div>
                         <div class="col-sm"><img src={profilePlaceholder} class="img-fluid" alt='Profile Image'></img> </div>
                         <div class="col-sm"><br></br></div>
                     </div>
                 </div>
-                <div class="col-6">
+                <div class="col-8">
                     <div>
                         <div class="col text-center">
                        
-                    <div
-                        className="col-12 col-md-10 mb-3 p-3"
-                        style={{ border: '1px dotted #1a1a1a' }}
-                    >
-                        <GroupForm />
-                    </div>
-                
-                    <p> This is where we can import list of groups</p>
-                    <p> and the number of members in each group. </p>
+                        <div
+                            className="col-12 col-md-10 mb-3 p-3"
+                            style={{ border: '1px dotted #1a1a1a' }}
+                        >
+                            <GroupForm />
+                        <p> This is where we can import list of groups</p>
+                        <p> and the number of members in each group. </p>
+                        </div>
+                    
 
+                        </div>
+                        </div>
+                        </div>
+                <div class="col-4">
+                        <div class="row-4 card" >
+                            <img src={logo} class="card-img-top" alt={profilePlaceholder}/> 
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">An item</li>
+                                <li class="list-group-item">A second item</li>
+                                <li class="list-group-item">A third item</li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="/" class="card-link">Card link</a>
+                                <a href="/" class="card-link">Another link</a>
+                            </div>
+                        </div>
+                        <div class="row-4 card" >
+                            <img src={logo} class="card-img-top" alt={profilePlaceholder}/> 
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">An item</li>
+                                <li class="list-group-item">A second item</li>
+                                <li class="list-group-item">A third item</li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="/" class="card-link">Card link</a>
+                                <a href="/" class="card-link">Another link</a>
+                            </div>
+                        </div>
+                        <div class="row-4 card" >
+                            <img src={logo} class="card-img-top" alt={profilePlaceholder}/> 
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">An item</li>
+                                <li class="list-group-item">A second item</li>
+                                <li class="list-group-item">A third item</li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="/" class="card-link">Card link</a>
+                                <a href="/" class="card-link">Another link</a>
+                            </div>
+                        </div>
+                    
                     </div>
+                    </div>
+
                 </div>
-                <div class="col-1"></div>
-            </div>
-
+            
             <div class="hide-on-desktop">
                 <div class="col-sm"><br></br></div>
                 <div class="col-sm"><img src={logo} class="img-fluid" alt='Synapse Logo'></img> </div>
                 <div class="col-sm"><br></br></div>
             </div>
 
-
         </div>
-    </div>
-    </div>
   
+ 
     );
 
 }
