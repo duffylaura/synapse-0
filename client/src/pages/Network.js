@@ -5,6 +5,7 @@
 
 import React from 'react'
 import profilePlaceholder from '../assets/profile-placeholder.png';
+import NetworkImage from '../assets/network.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../index.css';
 import logo from '../assets/logo-grey-banner.png';
@@ -25,10 +26,10 @@ function Network() {
                 </div>
                 <div class="col-6">
                     <div>
-                        <div class="col text-center"><h2> @Username</h2></div><br></br>
+                        <div class="col text-center"><h2> @Afia Blay</h2></div><br></br>
                     </div>
                     <div> 
-                        <p> This is where we can import data</p>
+                    <img src={NetworkImage} class="img-fluid" alt='Network'></img>
                     </div>
                 </div>
                 <div class="col-1"></div>
