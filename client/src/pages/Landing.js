@@ -20,8 +20,9 @@ function Landing() {
                         <Link to="/signup">
                         <div class="col text-center"><button class="custom-button"> Sign Up </button></div> <br></br>
                         </Link>
+                        <Link to='/about'>
                         <div class="col text-center"><button class="custom-button"> About </button></div> <br></br>
-    
+                        </Link>
                     </div>
                 </div>
                 <div class="col-sm"> </div>

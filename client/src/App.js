@@ -18,7 +18,6 @@ import Signup from './pages/Signup';
 import Profile from './pages/Profile';
 import Group from './pages/Group';
 import Network from './pages/Network';
-import Nav from './components/NavBar/index';
 import NoMatch from './pages/NoMatch';
 import NewPost from './pages/NewPost';
 
@@ -91,6 +90,10 @@ function App() {
                 // path="/group/:id"
                 path="/network" 
                 element={<Network />} 
+              />
+              <Route 
+                path="/about" 
+                element={<About />} 
               />
               <Route 
                 path="*" 
