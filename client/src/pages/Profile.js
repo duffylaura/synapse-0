@@ -69,6 +69,7 @@ const Profile = () => {
 
     return (
         <div class="container">
+                        <Nav />
         <div class="font">
             <div class="row">
                 <div class="row"><br></br><br></br></div>
@@ -76,7 +77,6 @@ const Profile = () => {
                 <div class="col-4"> 
                     <div class="hide-on-phone">
                         <div class="col-sm"><br></br></div>
-                        <Nav />
                         <div class="col-sm"><img src={profilePlaceholder} class="img-fluid" alt='Profile'></img> </div>
                         <div class="col-sm"><br></br></div>
                     </div>
@@ -95,7 +95,7 @@ const Profile = () => {
                             <input type="submit" value="Submit" />
                         </form> */}
 
-                        <Link to="/Group">
+                        <Link to="/Network">
                         <div class="col text-center"><button class="custom-button"> Link to Groups </button></div> <br></br>
                         </Link>
                 
