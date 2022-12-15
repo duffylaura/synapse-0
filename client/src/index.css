@@ -26,6 +26,15 @@ code {
   box-shadow: 4px 4px 4px rgba(27, 247, 211, 0.5);
 }
 
+.custom-nav-button {
+  font-family: 'Crimson Pro', serif;
+  box-sizing: border-box;
+  width: 154px;
+  height: 55px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0px -4px 4px rgba(255, 204, 174, 0.75);
+}
+
 .font{
   font-family: 'Crimson Pro', serif;
 }
