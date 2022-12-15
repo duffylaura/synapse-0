@@ -18,6 +18,7 @@ import Signup from './pages/Signup';
 import Profile from './pages/Profile';
 import Group from './pages/Group';
 import Network from './pages/Network';
+import About from './pages/About';
 
 import NoMatch from './pages/NoMatch';
 import Conversation from './pages/Conversation';
@@ -63,6 +64,10 @@ function App() {
                 // path="/group/:id"
                 path="/network" 
                 element={<Network />} 
+              />
+              <Route 
+                path="/about" 
+                element={<About />} 
               />
               <Route 
                 path="*" 
