@@ -1,10 +1,18 @@
-import React from "react";
-// import Auth from "../../utils/auth";
-// import { Link } from "react-router-dom";
+import React from "react"
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../../index.css';
+import Github from '../../assets/github.png'
 
-function Footer() {
-    return (
-        <h1> Footer Test</h1>
+import ListGroup from 'react-bootstrap/ListGroup';
+
+function Footer(){
+    return(
+        <footer className='footer m-auto'>
+     <ListGroup horizontal>
+      <ListGroup.Item><a href="https://github.com/duffylaura/project-3" target="_blank" rel="noreferrer"><img src={Github} alt="github icon" height="25px"></img></a></ListGroup.Item>
+    </ListGroup>
+      </footer>
+      
     )
 };
 
