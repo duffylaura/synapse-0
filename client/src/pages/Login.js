@@ -48,6 +48,7 @@ const Login = (props) => {
 
     return (
         <div className="container">
+                        <Nav />
         <div className="font">
             <div className="row">
                 <div className="row"><br></br><br></br></div>
@@ -55,7 +56,6 @@ const Login = (props) => {
                 <div className="col-4"> 
                     <div className="hide-on-phone">
                         <div className="col-sm"><br></br></div>
-                        <Nav />
                         <div className="col-sm"><img src={logo} className="img-fluid" alt='Synapse Logo'></img> </div>
                         <div className="col-sm"><br></br></div>
                     </div>

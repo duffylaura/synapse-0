@@ -10,7 +10,7 @@ function Landing() {
         <div class="container">
             <div class="row"> <br></br> <br></br></div>
             <div class="row align-items-center">
-                <div class="col-sm"> <Nav /></div>
+                <div class="col-sm"></div>
                 <div class="col-sm">
                     <img src={logo} class="img-fluid" alt='Synapse Logo'></img>
                     <div>

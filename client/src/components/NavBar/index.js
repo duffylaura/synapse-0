@@ -28,7 +28,12 @@ function Nav() {
                         <ul class="navbar-nav">
                         <li class="nav-item active">
                             <Link to="/group">
-                                <div class="col text-center"> <button class="custom-nav-button"> Make New Group </button> </div> <br></br>
+                                <div class="col text-center"> <button class="custom-nav-button"> My Group </button> </div> <br></br>
+                            </Link>
+                        </li>
+                        <li class="nav-item">
+                            <Link to="/">
+                                <div class="col text-center"> <button class="custom-nav-button">Create Group </button> </div> <br></br>
                             </Link>
                         </li>
                         <li class="nav-item">
