@@ -20,6 +20,7 @@ import Group from './pages/Group';
 import Network from './pages/Network';
 import NoMatch from './pages/NoMatch';
 import NewPost from './pages/NewPost';
+import About from './pages/About'
 
 
 
