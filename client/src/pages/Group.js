@@ -7,6 +7,7 @@ import logo from '../assets/logo-grey-banner.png';
 // import { Link } from 'react-router-dom';
 import GroupForm from '../components/GroupForm/index';
 // import {QUERY_USER} from '../utils/queries';
+import Nav from '../components/NavBar';
 
 function Group() {
     // const { username: userParam } = useParams();
@@ -39,6 +40,7 @@ function Group() {
                 <div class="col-3"> 
                     <div class="hide-on-phone">
                         <div class="col-sm"><br></br></div>
+                        <Nav />
                         <div class="col-sm"><img src={profilePlaceholder} class="img-fluid" alt='Profile Image'></img> </div>
                         <div class="col-sm"><br></br></div>
                     </div>
@@ -60,8 +62,8 @@ function Group() {
                         </div>
                         </div>
                         </div>
-                <div class="col-4">
-                        <div class="row-4 card" >
+                <div class="row row-cols-1 row-cols-md-3">
+                        <div class="col mb-4 card" >
                             <img src={logo} class="card-img-top" alt={profilePlaceholder}/> 
                             <div class="card-body">
                                 <h5 class="card-title">Card title</h5>
@@ -77,7 +79,7 @@ function Group() {
                                 <a href="/" class="card-link">Another link</a>
                             </div>
                         </div>
-                        <div class="row-4 card" >
+                        <div class="col mb-4 card" >
                             <img src={logo} class="card-img-top" alt={profilePlaceholder}/> 
                             <div class="card-body">
                                 <h5 class="card-title">Card title</h5>
@@ -93,7 +95,7 @@ function Group() {
                                 <a href="/" class="card-link">Another link</a>
                             </div>
                         </div>
-                        <div class="row-4 card" >
+                        <div class="col mb-4 card" >
                             <img src={logo} class="card-img-top" alt={profilePlaceholder}/> 
                             <div class="card-body">
                                 <h5 class="card-title">Card title</h5>

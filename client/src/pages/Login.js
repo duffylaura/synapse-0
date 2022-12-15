@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import logo from '../assets/logo-grey-banner.png';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../index.css';
+import Nav from '../components/NavBar';
 
 const Login = (props) => {
   const [formState, setFormState] = useState({ 
@@ -54,6 +55,7 @@ const Login = (props) => {
                 <div className="col-4"> 
                     <div className="hide-on-phone">
                         <div className="col-sm"><br></br></div>
+                        <Nav />
                         <div className="col-sm"><img src={logo} className="img-fluid" alt='Synapse Logo'></img> </div>
                         <div className="col-sm"><br></br></div>
                     </div>

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
+import Nav from '../components/NavBar';
 
 // import { Navigate, useParams } from 'react-router-dom';
 // import { useQuery } from '@apollo/client';
@@ -58,6 +59,7 @@ function Conversation() {
                     <div className="col-4">
                         <div className="hide-on-phone">
                             <div className="col-sm"><br></br></div>
+                            <Nav />
                             <div className="col-sm"><img src={profilePlaceholder} className="img-fluid" alt='Profile'></img> </div>
                             <div className="col-sm"><br></br></div>
                         </div>
